@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import QuizItem from "./QuizItem";
 import {Grid} from "@mui/material";
+
 export default function QuizList() {
     let [quizs, setQuiz] = useState([]);
     useEffect(() => {

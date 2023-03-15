@@ -1,12 +1,11 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
-
-
+import {
+    Card,
+    CardMedia,
+    CardContent,
+    Typography,
+    CardActions} from "@mui/material";
 
 export default function QuizItem({quiz}) {
     return (

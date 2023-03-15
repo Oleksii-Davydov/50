@@ -1,14 +1,13 @@
 import * as React from 'react';
+import QuizList from "./QuizList";
+import QuizMenu from "./Menu";
+import {useState} from "react";
+import Footer from "./Footer";
 import {
     Box,
     AppBar,
     CssBaseline,
 } from '@mui/material';
-import QuizHeader from "./QuizHeader";
-import QuizList from "./QuizList";
-import QuizMenu from "./QuizMenu";
-import {useState} from "react";
-import QuizFooter from "./QuizFooter";
 
 const drawerWidth = 240;
 
@@ -47,7 +46,7 @@ export default function ClippedDrawer() {
             </div>
 
             {/*<QuizMenu active={menuActive} setActive={setMenuActive} header={"Menu"} items={items}/>*/}
-            <QuizFooter/>
+            <Footer/>
 
         </Box>
     );

@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 
-
 export default function QuizHeader() {
+
     let [showModal, setShowModal] = useState(false)
+
 const hadleClick = () => {
     setShowModal(!showModal);
 }

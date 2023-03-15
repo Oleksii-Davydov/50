@@ -1,17 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import QuizList from "./pages/QuizList";
-import QuizHeader from "./pages/QuizHeader";
-import ClippedDrawer from "./pages/QuizDrower";
-import QuizFooter from "./pages/QuizFooter";
-import QuizMenu from "./pages/QuizMenu";
-
+import ClippedDrawer from "./components/Drower";
 
 function App() {
 
     return (
         <div className="App">
-           <ClippedDrawer/>
+            <ClippedDrawer/>
         </div>
     );
 }
