@@ -121,25 +121,11 @@
 }
 
 /*menu*/
-/*.nav_menu {*/
-/*    width: 100%;*/
-/*    height: 50px;*/
-/*    background-color: #46466E;*/
-/*    position: fixed;*/
-/*    z-index: 50;*/
-/*    display: flex;*/
-/*    align-items: center;*/
 
-/*}*/
 
-/*.main_menu {*/
-/*    padding: 50px;*/
-/*}*/
-
-/*p {*/
-/*    padding: 20px;*/
-/*}*/
-
+.nav_menu {
+    display: none;
+}
 
 .burger_btn {
     width: 20px;
@@ -177,17 +163,24 @@
     bottom: 0;
 }
 
+.box_main {
+    display: flex;
+    justify-content: space-around;
+}
+
 .main {
     padding: 100px 15px 15px 15px;
 }
 
+.box_menu {
+    width: 25%;
+}
+
 .menu {
-    position: fixed;
+    padding-top: 66px;
     height: 100vh;
     width: 100vw ;
-    top: 66px;
-    left: 0;
-    transform: translate(-130%);
+    /*transform: translate(-125%);*/
     transition: all 0.2s;
 }
 
@@ -196,38 +189,6 @@
     transition: all 0.4s;
 }
 
-/* */
-
-.menu.showModal {
-    transform: translate(0);
-
-}
-
-.blur {
-    height: 100vh;
-    width: 100vw;
-    left: 30% ;
-    backdrop-filter: blur(2px);
-    position: absolute;
-}
-
-.menu_content {
-    height: 100%   ;
-    width: 30%;
-    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.menu_header {
-    padding: 10px ;
-    font-size: 2rem;
-    color: #1976d2;
-    border-bottom: 1px solid #1976d2;
-    width: 100%;
-    text-align: center;
-}
 
 li {
     padding: 15px;
@@ -248,12 +209,58 @@ ul {
 
 }
 
+.menu_content {
+    height: 100%   ;
+    width: 25%;
+    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu_header {
+    padding: 10px ;
+    font-size: 2rem;
+    color: #1976d2;
+    border-bottom: 1px solid #1976d2;
+    width: 100%;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
 @media screen and (max-width: 768px){
 .menu_content {
     width: 100%;
     height: max-content;
 }
-    .blur {
-        backdrop-filter: none;
+    .nav_menu {
+        display: block;
     }
+    .menu {
+        transform: translate(-125%);
+    }
+
+    .css-mhc70k-MuiGrid-root {
+      display: block;
+        text-align: center;
+    }
+
+    .box_menu {
+        /*display: none;*/
+        width: 1%;
+    }
+
+    /*.box_menu.active {*/
+    /*    display: block;*/
+    /*    !*width: 25%;*!*/
+    /*}*/
+
+    /*.nav_menu {*/
+    /*    display: block;*/
+    /*}*/
 }
+

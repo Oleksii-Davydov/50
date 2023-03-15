@@ -14,7 +14,7 @@ function App() {
 
         <div className="App">
            <ClippedDrawer/>
-            <QuizFooter/>
+            {/*<QuizFooter/>*/}
            {/* <QuizMenu/>*/}
         </div>
     );
