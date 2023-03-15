@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import QuizMenu from "./QuizMenu";
 
 
 export default function QuizHeader() {

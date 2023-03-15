@@ -1,8 +1,3 @@
-/*.App {*/
-/*    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);*/
-/*    border-radius: 0px 0px 12px 12px;*/
-/*}*/
-
 
 .header {
     padding: 10px;
@@ -36,6 +31,7 @@
     color: #1976d2;
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .css-1t6e9jv-MuiCardActions-root {
@@ -130,7 +126,6 @@
 .burger_btn {
     width: 20px;
     height: 20px;
-    margin-left: 20px;
     position: relative;
     cursor: pointer;
 }
@@ -139,7 +134,7 @@
     position: absolute;
     top: 9px;
     width: 20px;
-    background-color: black;
+    background-color: #1976d2;
     height: 2px;
 
 }
@@ -149,14 +144,14 @@
     position: absolute;
     top: 0;
     width: 20px;
-    background-color: black;
+    background-color: #1976d2;
     height: 2px;
 
 }
 
 .burger_btn:after {
     height: 2px;
-    background-color: black;
+    background-color: #1976d2;
     width: 20px;
     content: '';
     position: absolute;
@@ -178,9 +173,9 @@
 
 .menu {
     padding-top: 66px;
-    height: 100vh;
+    height: 100%;
     width: 100vw ;
-    /*transform: translate(-125%);*/
+    transform: translate(0);
     transition: all 0.2s;
 }
 
@@ -188,7 +183,6 @@
     transform: translate(0%);
     transition: all 0.4s;
 }
-
 
 li {
     padding: 15px;
@@ -199,7 +193,10 @@ ul li a {
     text-decoration: none;
     font-size: 1.3rem;
 }
-
+ul li a:hover {
+    color: #fff; /* Колір тексту */
+    background: #008; /* Колір фону */
+}
 ul {
     text-align: center;
     display: flex;
@@ -233,10 +230,10 @@ ul {
 }
 
 @media screen and (max-width: 768px){
-.menu_content {
-    width: 100%;
-    height: max-content;
-}
+    .menu_content {
+        width: 100%;
+        height: max-content;
+    }
     .nav_menu {
         display: block;
     }
@@ -245,7 +242,7 @@ ul {
     }
 
     .css-mhc70k-MuiGrid-root {
-      display: block;
+        display: block;
         text-align: center;
     }
 
@@ -254,13 +251,30 @@ ul {
         width: 1%;
     }
 
-    /*.box_menu.active {*/
-    /*    display: block;*/
-    /*    !*width: 25%;*!*/
-    /*}*/
 
-    /*.nav_menu {*/
-    /*    display: block;*/
-    /*}*/
+    .header_logo {
+        font-size: 25px;
+    }
+
+    .button {
+        font-size: 10px;
+        line-height: 24px;
+    }
+
+    .footer {
+        display: block;
+        text-align: center;
+    }
 }
 
+@media screen and (max-width: 450px) {
+
+    .header {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        padding: 10px;
+        display: flex;
+        text-align: -webkit-center;
+    }
+
+}
