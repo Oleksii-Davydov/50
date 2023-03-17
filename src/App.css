@@ -1,4 +1,4 @@
-
+/*header*/
 .header {
     padding: 10px;
     display: flex;
@@ -18,6 +18,44 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+}
+
+.nav_menu {
+    display: none;
+}
+
+.burger_btn {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger_btn span {
+    position: absolute;
+    top: 9px;
+    width: 20px;
+    background-color: #1976d2;
+    height: 2px;
+
+}
+
+.burger_btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20px;
+    background-color: #1976d2;
+    height: 2px;
+}
+
+.burger_btn:after {
+    height: 2px;
+    background-color: #1976d2;
+    width: 20px;
+    content: '';
+    position: absolute;
+    bottom: 0;
 }
 
 .button {
@@ -62,125 +100,33 @@
     box-sizing: border-box;
 }
 
-.footer {
-    border-top: 2px solid #E6E6F0;
-    background: #F5F5FA;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer_number_link {
-    text-decoration: none;
-    font-family: "Helvetica";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: #46466E;
-}
-
-.email {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-    font-family: "Helvetica";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color: #24A3FF;
-}
-
-.address_footer {
-    text-align: center;
-    font-family: "Helvetica";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #323264;
-}
-
-.conpany {
-    margin-top: 30px;
-    text-align: center;
-    font-family: "Helvetica";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: #B3B3BA;
-}
-
-/*menu*/
-
-
-.nav_menu {
-    display: none;
-}
-
-.burger_btn {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    cursor: pointer;
-}
-
-.burger_btn span {
-    position: absolute;
-    top: 9px;
-    width: 20px;
-    background-color: #1976d2;
-    height: 2px;
-
-}
-
-.burger_btn:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 20px;
-    background-color: #1976d2;
-    height: 2px;
-
-}
-
-.burger_btn:after {
-    height: 2px;
-    background-color: #1976d2;
-    width: 20px;
-    content: '';
-    position: absolute;
-    bottom: 0;
-}
-
+/*menu and main*/
 .box_main {
     display: flex;
     justify-content: space-around;
 }
 
 .main {
+    width: 100%;
     padding: 100px 15px 15px 15px;
 }
+
 
 .box_menu {
     width: 25%;
 }
 
 .menu {
+    /* width: 100%; */
     padding-top: 66px;
     height: 100%;
-    width: 100vw ;
+    /* width: 100vw; */
     transform: translate(0);
     transition: all 0.2s;
 }
 
 .menu.active {
-    transform: translate(0%);
+    transform: translate(100%);
     transition: all 0.4s;
 }
 
@@ -207,8 +153,8 @@ ul {
 }
 
 .menu_content {
-    height: 100%   ;
-    width: 25%;
+    height: 100%;
+    width: 100%;
     background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     display: flex;
     flex-direction: column;
@@ -230,15 +176,9 @@ ul {
 }
 
 @media screen and (max-width: 768px){
-    .menu_content {
-        width: 100%;
-        height: max-content;
-    }
+    /*header*/
     .nav_menu {
         display: block;
-    }
-    .menu {
-        transform: translate(-125%);
     }
 
     .css-mhc70k-MuiGrid-root {
@@ -246,25 +186,59 @@ ul {
         text-align: center;
     }
 
-    .box_menu {
-        /*display: none;*/
-        width: 1%;
-    }
-
-
     .header_logo {
         font-size: 25px;
     }
 
-    .button {
-        font-size: 10px;
-        line-height: 24px;
+
+    /*menu and main*/
+    .main {
+        width: 100%;
     }
 
-    .footer {
+    .box_main {
         display: block;
-        text-align: center;
+        justify-content: space-around;
     }
+
+    .box_menu {
+        width: 100%;
+    }
+
+    .menu.active {
+        display: block;
+        width: 100%;
+        transform: translate(0%);
+        transition: all 0.4s;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        padding-top: 66px;
+        height: 100%;
+        transform: translate(-100%);
+        transition: all 0.2s;
+    }
+
+    .menu_content {
+        width: 100%;
+        height: 100vh;
+    }
+
+    /*.nav_menu {*/
+    /*    display: block;*/
+    /*}*/
+
+    .menu {
+        transform: translate(-100%);
+    }
+
+}
+
+.css-mhc70k-MuiGrid-root {
+    gap: 20px;
+    justify-content: center;
 }
 
 @media screen and (max-width: 450px) {

@@ -1,0 +1,61 @@
+.footer {
+    border-top: 2px solid #E6E6F0;
+    background: #F5F5FA;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_number_link {
+    text-decoration: none;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #46466E;
+}
+
+.email {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #24A3FF;
+}
+
+.address_footer {
+    text-align: center;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #323264;
+}
+
+.conpany {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #B3B3BA;
+}
+
+@media screen and (max-width: 768px){
+    .footer {
+        display: block;
+        text-align: center;
+    }
+
+}
