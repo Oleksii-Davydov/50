@@ -1,4 +1,5 @@
 import React from "react";
+import './Footer.css'
 
 export default function Footer() {
     return (
@@ -11,7 +12,6 @@ export default function Footer() {
             <div className="footer_dox_right">
                 <p className="conpany">© 2021 HLEGAL Law company, LLC</p>
             </div>
-
         </footer>
     )
 }

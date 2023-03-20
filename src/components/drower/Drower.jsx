@@ -1,23 +1,24 @@
 import * as React from 'react';
-import QuizList from "./QuizList";
-import QuizMenu from "./Menu";
+import QuizList from "../mediaCard/QuizList";
+import Menu from "../menu/Menu";
 import {useState} from "react";
-import Footer from "./Footer";
+import Footer from "../footer/Footer";
 import {
     Box,
     AppBar,
-    CssBaseline,
+    CssBaseline
 } from '@mui/material';
 
-const drawerWidth = 240;
-
 export default function ClippedDrawer() {
-
     const [menuActive, setMenuActive] = useState(false)
-    const items = [{value: "Main", href: "/main"}, {value: "Directory", href: "/directory"},
-        {value: "Rating", href: "/rating"}, {value: "Tests", href: "/tests"}];
-    return (
+    const items = [
+        {value: "Main", href: "/main"},
+        {value: "Directory", href: "/directory"},
+        {value: "Rating", href: "/rating"},
+        {value: "Tests", href: "/tests"}
+    ];
 
+    return (
         <Box sx={{display: ''}}>
             <CssBaseline/>
             <AppBar position="fixed" sx={{zIndex: (theme) => theme.zIndex.drawer + 1}}>
@@ -37,15 +38,13 @@ export default function ClippedDrawer() {
             </AppBar>
             <div className="box_main">
                 <div className="box_menu">
-                    <QuizMenu active={menuActive} setActive={setMenuActive} header={"Menu"} items={items}/>
+                    <Menu active={menuActive} setActive={setMenuActive} header={"Menu"} items={items}/>
                 </div>
                 <div className="main">
                     <QuizList/>
                 </div>
 
             </div>
-
-            {/*<QuizMenu active={menuActive} setActive={setMenuActive} header={"Menu"} items={items}/>*/}
             <Footer/>
 
         </Box>
