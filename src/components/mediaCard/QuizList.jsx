@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {Grid} from "@mui/material";
-import MediaCard from "./MediaCard";
-
+import MediaCard from "./MediaCard"
 export default function List() {
     let [quizs, setQuiz] = useState([]);
 
