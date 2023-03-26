@@ -11,8 +11,13 @@ import {
 
 export default class ClippedDrawer extends Component {
     state = {
-        menuActive: false,
+        active: false,
     };
+
+    constructor() {
+        super();
+        this.hendelToggleOpenMenu = this.hendelToggleOpenMenu.bind(this);
+    }
 
     render() {
         const items = [
@@ -20,7 +25,7 @@ export default class ClippedDrawer extends Component {
             {value: "Directory", href: "/directory"},
             {value: "Rating", href: "/rating"},
             {value: "Tests", href: "/tests"}
-    ]
+        ]
         return (
             <Box sx={{display: ''}}>
                 <CssBaseline/>
@@ -28,7 +33,7 @@ export default class ClippedDrawer extends Component {
                     {/*<QuizHeader/>*/}
                     <header className="header">
                         <nav className="nav_menu">
-                            <div className="burger_btn" onClick={() => this.setMenuActive(!this.menuActive)}>
+                            <div className="burger_btn" onClick={this.hendelToggleOpenMenu}>
 
                                 <span/>
                             </div>
@@ -41,7 +46,8 @@ export default class ClippedDrawer extends Component {
                 </AppBar>
                 <div className="box_main">
                     <div className="box_menu">
-                        <Menu active={this.props.menuActive} setActive={this.props.setMenuActive} header={"Menu"} items={this.props.items}/>
+                        <Menu active={this.state.active} setActive={this.setMenuActive} header={"Menu"} items={items}/>
+
                     </div>
                     <div className="main">
                         <QuizList/>
@@ -54,10 +60,14 @@ export default class ClippedDrawer extends Component {
 
         );
     }
+
+    hendelToggleOpenMenu() {
+        this.setState({active: !this.state.active})
+    }
 }
 
 // export default function ClippedDrawer() {
-//     const [menuActive, setMenuActive] = useState(false)
+//     const [active, setMenuActive] = useState(false)
 //     const items = [
 //         {value: "Main", href: "/main"},
 //         {value: "Directory", href: "/directory"},
@@ -72,7 +82,7 @@ export default class ClippedDrawer extends Component {
 //                 {/*<QuizHeader/>*/}
 //                 <header className="header">
 //                     <nav className="nav_menu">
-//                         <div className="burger_btn" onClick={() => setMenuActive(!menuActive)}>
+//                         <div className="burger_btn" onClick={() => setMenuActive(!active)}>
 //
 //                             <span/>
 //                         </div>
@@ -85,7 +95,7 @@ export default class ClippedDrawer extends Component {
 //             </AppBar>
 //             <div className="box_main">
 //                 <div className="box_menu">
-//                     <Menu active={menuActive} setActive={setMenuActive} header={"Menu"} items={items}/>
+//                     <Menu active={active} setActive={setMenuActive} header={"Menu"} items={items}/>
 //                 </div>
 //                 <div className="main">
 //                     <QuizList/>
@@ -96,4 +106,4 @@ export default class ClippedDrawer extends Component {
 //
 //         </Box>
 //     );
-//}
+// }
