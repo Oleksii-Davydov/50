@@ -1,12 +1,16 @@
+import React from "react";
+import {Component} from "react";
 import './App.css';
 import ClippedDrawer from "./components/drower/Drower";
 
-function App() {
-    return (
-        <div className="App">
-            <ClippedDrawer/>
-        </div>
-    );
+
+export default class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                             <ClippedDrawer/>
+                         </div>
+        );
+    }
 }
 
-export default App;

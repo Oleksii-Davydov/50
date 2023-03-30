@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from "react";
+import {Component} from "react";
 import QuizList from "../mediaCard/QuizList";
 import Menu from "../menu/Menu";
-import {useState} from "react";
 import Footer from "../footer/Footer";
 import {
     Box,
@@ -9,44 +9,56 @@ import {
     CssBaseline
 } from '@mui/material';
 
-export default function ClippedDrawer() {
-    const [menuActive, setMenuActive] = useState(false)
-    const items = [
-        {value: "Main", href: "/main"},
-        {value: "Directory", href: "/directory"},
-        {value: "Rating", href: "/rating"},
-        {value: "Tests", href: "/tests"}
-    ];
+export default class ClippedDrawer extends Component {
+    state = {
+        active: false,
+    };
 
-    return (
-        <Box sx={{display: ''}}>
-            <CssBaseline/>
-            <AppBar position="fixed" sx={{zIndex: (theme) => theme.zIndex.drawer + 1}}>
-                {/*<QuizHeader/>*/}
-                <header className="header">
-                    <nav className="nav_menu">
-                        <div className="burger_btn" onClick={() => setMenuActive(!menuActive)}>
+    constructor() {
+        super();
+        this.hendelToggleOpenMenu = this.hendelToggleOpenMenu.bind(this);
+    }
 
-                            <span/>
+    render() {
+        const items = [
+            {value: "Main", href: "/main"},
+            {value: "Directory", href: "/directory"},
+            {value: "Rating", href: "/rating"},
+            {value: "Tests", href: "/tests"}
+        ]
+        return (
+            <Box sx={{display: ''}}>
+                <CssBaseline/>
+                <AppBar position="fixed" sx={{zIndex: (theme) => theme.zIndex.drawer + 1}}>
+                    {/*<QuizHeader/>*/}
+                    <header className="header">
+                        <nav className="nav_menu">
+                            <div className="burger_btn" onClick={this.hendelToggleOpenMenu}>
+
+                                <span/>
+                            </div>
+                        </nav>
+                        <div className="header_logo">COGNITIVE QUIZ</div>
+                        <div>
+                            <button className="button">CREATE NEW QUIZ</button>
                         </div>
-                    </nav>
-                    <div className="header_logo">COGNITIVE QUIZ</div>
-                    <div>
-                        <button className="button">CREATE NEW QUIZ</button>
+                    </header>
+                </AppBar>
+                <div className="box_main">
+                    <div className="box_menu">
+                        <Menu active={this.state.active} setActive={this.setMenuActive} header={"Menu"} items={items}/>
                     </div>
-                </header>
-            </AppBar>
-            <div className="box_main">
-                <div className="box_menu">
-                    <Menu active={menuActive} setActive={setMenuActive} header={"Menu"} items={items}/>
+                    <div className="main">
+                        <QuizList/>
+                    </div>
                 </div>
-                <div className="main">
-                    <QuizList/>
-                </div>
+                <Footer/>
+            </Box>
+        );
+    }
 
-            </div>
-            <Footer/>
-
-        </Box>
-    );
+    hendelToggleOpenMenu() {
+        this.setState({active: !this.state.active})
+    }
 }
+
