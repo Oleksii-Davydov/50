@@ -1,4 +1,7 @@
 /*header*/
+.NotFound {
+    color: black;
+}
 .header {
     padding: 10px;
     display: flex;

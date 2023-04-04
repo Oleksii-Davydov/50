@@ -15,16 +15,16 @@ export default function List() {
     }, [])
 
     return (
-        <Grid container spacing={2}>
-            {quizs.map((quiz, index) => (
-                <MediaCard
-                    key={quiz.key}
-                    quiz={quiz}
-                    id={index}
+            <Grid container spacing={2}>
+                {quizs.map((quiz, index) => (
+                    <MediaCard
+                        key={quiz.key}
+                        quiz={quiz}
+                        id={index}
 
-                />
-            ))}
-        </Grid>
+                    />
+                ))}
+            </Grid>
     )
 
 }

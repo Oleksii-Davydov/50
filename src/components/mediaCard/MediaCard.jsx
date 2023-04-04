@@ -8,10 +8,11 @@ import {
     CardActions
 } from "@mui/material";
 import CreateModal from "../dialogs/CreateModal";
-
+import { Link } from "react-router-dom";
 export default function MediaCard({quiz}) {
     const {avatar, name, description, section} = quiz;
     const [open, setOpenModal] = useState(false)
+    const pathToName = name.split(' ').join('_').toLowerCase();
 
     return (
         <>
@@ -30,7 +31,14 @@ export default function MediaCard({quiz}) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small" class="button">Start QUIZ</Button>
+                    <Button size="small" class="button">
+                        <Link
+                            style={{textDecoration: 'none', color: 'inherit'}}
+                            to={`/quizs/${pathToName}`}
+                        >
+                            Find QUIZ
+                            </Link>
+                        </Button>
                     <Button size="small" onClick={() => setOpenModal(true)} class="button">Show More</Button>
                 </CardActions>
             </Card>

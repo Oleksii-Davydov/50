@@ -1,52 +1,25 @@
 import * as React from 'react';
 import QuizList from "../mediaCard/QuizList";
-import Menu from "../menu/Menu";
-import {useState} from "react";
-import Footer from "../footer/Footer";
+import QuizsRoutes from "../mediaCard/QuizsRoutes";
+import {Box} from '@mui/material';
+import NotFound from "../NotFound";
 import {
-    Box,
-    AppBar,
-    CssBaseline
-} from '@mui/material';
+    BrowserRouter,
+    Routes,
+    Route
+} from "react-router-dom";
 
 export default function ClippedDrawer() {
-    const [menuActive, setMenuActive] = useState(false)
-    const items = [
-        {value: "Main", href: "/main"},
-        {value: "Directory", href: "/directory"},
-        {value: "Rating", href: "/rating"},
-        {value: "Tests", href: "/tests"}
-    ];
 
     return (
-        <Box sx={{display: ''}}>
-            <CssBaseline/>
-            <AppBar position="fixed" sx={{zIndex: (theme) => theme.zIndex.drawer + 1}}>
-                {/*<QuizHeader/>*/}
-                <header className="header">
-                    <nav className="nav_menu">
-                        <div className="burger_btn" onClick={() => setMenuActive(!menuActive)}>
-
-                            <span/>
-                        </div>
-                    </nav>
-                    <div className="header_logo">COGNITIVE QUIZ</div>
-                    <div>
-                        <button className="button">CREATE NEW QUIZ</button>
-                    </div>
-                </header>
-            </AppBar>
-            <div className="box_main">
-                <div className="box_menu">
-                    <Menu active={menuActive} setActive={setMenuActive} header={"Menu"} items={items}/>
-                </div>
-                <div className="main">
-                    <QuizList/>
-                </div>
-
-            </div>
-            <Footer/>
-
-        </Box>
+            <Box sx={{display: ''}}>
+                <BrowserRouter>
+                    <Routes>
+                        <Route index element={<QuizList/>} path='/quizs'/>
+                        <Route path='*' element={<NotFound/>}/>
+                        <Route path='/quizs/*' element={<QuizsRoutes/>}/>
+                    </Routes>
+                </BrowserRouter>
+            </Box>
     );
 }
