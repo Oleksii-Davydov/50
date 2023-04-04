@@ -12,7 +12,7 @@ import {
 export default function BoxTemplate({ children }) {
     const [menuActive, setMenuActive] = useState(false)
     const items = [
-        {value: "Main", href: "/main"},
+        {value: "Main", href: "/quizs"},
         {value: "Directory", href: "/directory"},
         {value: "Rating", href: "/rating"},
         {value: "Tests", href: "/tests"}
