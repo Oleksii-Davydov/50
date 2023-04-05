@@ -1,5 +1,4 @@
 import * as React from 'react';
-import QuizList from "../mediaCard/QuizList";
 import Menu from "../menu/Menu";
 import {useState} from "react";
 import Footer from "../footer/Footer";
@@ -12,10 +11,15 @@ import {
 export default function BoxTemplate({ children }) {
     const [menuActive, setMenuActive] = useState(false)
     const items = [
-        {value: "Main", href: "/quizs"},
-        {value: "Directory", href: "/directory"},
-        {value: "Rating", href: "/rating"},
-        {value: "Tests", href: "/tests"}
+        {value: "MAIN", href: "/quizs"},
+        {value: "HTML", href: "/quizs/html"},
+        {value: "CSS", href: "/quizs/css"},
+        {value: "JS", href: "/quizs/js"},
+        {value: "ReactJS", href: "/quizs/reactjs"},
+        {value: "SASS and SCSS", href: "/quizs/sass_and_scss"},
+        {value: "GitHub", href: "/quizs/github"},
+        {value: "Faworite", href: "/quizs/faworite"},
+        {value: "Criate New Quiz", href: "/criatr_new_quiz"}
     ];
 
     return (

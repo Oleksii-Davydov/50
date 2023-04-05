@@ -3,6 +3,7 @@ import QuizList from "../mediaCard/QuizList";
 import QuizsRoutes from "../mediaCard/QuizsRoutes";
 import {Box} from '@mui/material';
 import NotFound from "../NotFound";
+import QuizsRoutesHtml from "../Tests/Html/QuizsRoutesHtml"
 import {
     BrowserRouter,
     Routes,
@@ -18,6 +19,7 @@ export default function ClippedDrawer() {
                         <Route index element={<QuizList/>} path='/quizs'/>
                         <Route path='*' element={<NotFound/>}/>
                         <Route path='/quizs/*' element={<QuizsRoutes/>}/>
+                        <Route path='/html/*' element={<QuizsRoutesHtml/>}/>
                     </Routes>
                 </BrowserRouter>
             </Box>
