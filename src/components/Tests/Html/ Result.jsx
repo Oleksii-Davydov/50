@@ -117,7 +117,7 @@ export default function HtmlTestBasic() {
     }
 
     const refresh = () => {
-       setCurrentQuistion(0)
+        setCurrentQuistion(0)
         setScore(0)
         setShowScore(false)
     }
@@ -126,23 +126,8 @@ export default function HtmlTestBasic() {
         <div className="test">
             {
                 showScore
-                // ? <Result/>
-                    ? <div className="section_score">
-                        <div>Правильных ответов {score} из {question.length}</div>
-                    <button
-                        className="btn_test refresh_btn"
-                        onClick={refresh}
-                    >Повторить</button>
-                        <button className="btn_test">
-                            <Link
-                                style={{textDecoration: 'none', color: 'inherit'}}
-                                to={`/quizs/html`}
-                            >
-                                Выход
-                            </Link>
-                        </button>
-                    </div>
-                    : <div className="quizz">
+                    // ? <Result/>
+                    ? <div className="quizz">
                         <div className="questin_section">
                             <div style={{color: 'white'}} className="questin_count">
                                 {/*<span><Timer/></span>*/}
@@ -157,6 +142,22 @@ export default function HtmlTestBasic() {
                                 >{item.answertext}</button>)
                             )}
                         </div>
+                    </div>
+                    : <div className="section_score">
+                        <div>Правильных ответов {score} из {question.length}</div>
+                        <button
+                            className="btn_test refresh_btn"
+                            onClick={refresh}
+                        >Повторить
+                        </button>
+                        <button className="btn_test">
+                            <Link
+                                style={{textDecoration: 'none', color: 'inherit'}}
+                                to={`/quizs/html`}
+                            >
+                                Выход
+                            </Link>
+                        </button>
                     </div>
             }
         </div>)
