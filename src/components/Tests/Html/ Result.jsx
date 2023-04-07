@@ -112,14 +112,14 @@ export default function HtmlTestBasic() {
         if (nextQuestion < question.length) {
             setCurrentQuistion(nextQuestion)
         } else {
-            setShowScore(true)
+            setShowScore(false)
         }
     }
 
     const refresh = () => {
         setCurrentQuistion(0)
         setScore(0)
-        setShowScore(false)
+        setShowScore(true)
     }
 
     return (
