@@ -1,8 +1,6 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
-// import MyTimer from '../../Timer/Timer'
-import Timer from '../../Timer/Timer'
-import Result from '../../Tests/Html/ Result'
+import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
+
 
 export default function HtmlTestBasic() {
     const question = [

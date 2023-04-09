@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import {useParams} from "react-router-dom"
-import {quizsTests  as quizsTestsApi } from "../../api/index"
-import {Grid} from "@mui/material";
-import MeadiaCardTest from "../mediaCard/MeadiaCardTest";
+import React, { useEffect, useState } from 'react';
+import {useParams} from 'react-router-dom';
+import {quizsTests  as quizsTestsApi } from '../../api/index';
+import {Grid} from '@mui/material';
+import MeadiaCardTest from '../mediaCard/MeadiaCardTest';
 
 export default function QuizsTests() {
     const { name } = useParams();

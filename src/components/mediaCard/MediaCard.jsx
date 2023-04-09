@@ -1,14 +1,15 @@
-import React, {useState} from "react";
-import Button from "@mui/material/Button";
+import React, {useState} from 'react';
+import Button from '@mui/material/Button';
+import CreateModal from '../dialogs/CreateModal';
+import { Link } from 'react-router-dom';
 import {
     Card,
     CardMedia,
     CardContent,
     Typography,
     CardActions
-} from "@mui/material";
-import CreateModal from "../dialogs/CreateModal";
-import { Link } from "react-router-dom";
+} from '@mui/material';
+
 export default function MediaCard({quiz}) {
     const {avatar, name, description, section} = quiz;
     const [open, setOpenModal] = useState(false)

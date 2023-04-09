@@ -22,7 +22,7 @@ function MyTimer({ expiryTimestamp }) {
 
 export default function Timer() {
     const time = new Date();
-    time.setSeconds(time.getSeconds() + 60); // 10 minutes timer
+    time.setSeconds(time.getSeconds() + 180); // 10 minutes timer
     return (
         <div>
             <MyTimer expiryTimestamp={time} />

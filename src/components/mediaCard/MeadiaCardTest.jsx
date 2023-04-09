@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
     Card,
     CardActions,
@@ -7,7 +7,7 @@ import {
     Button,
     Typography,
 } from '@mui/material';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function MeadiaCardTest({quizTest}) {
     const { nameTest, imegeSrc, tittleHtml } = quizTest

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Menu from "../menu/Menu";
-import {useState} from "react";
-import Footer from "../footer/Footer";
+import Menu from '../menu/Menu';
+import {useState} from 'react';
+import Footer from '../footer/Footer';
 import {
     Box,
     AppBar,

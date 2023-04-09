@@ -1,6 +1,5 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
-// import MyTimer from '../../Timer/Timer'
+import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import Timer from '../../Timer/Timer'
 import Result from '../../Tests/Html/ Result'
 

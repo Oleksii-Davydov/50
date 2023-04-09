@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import './Menu.css'
 
 export default function Menu({header, items, active, setActive}) {

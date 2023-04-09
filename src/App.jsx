@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 import './App.css';
-import ClippedDrawer from "./components/drower/Drower";
-import BoxTemplate from "./components/Templates/MainTemplateWropp"
+import ClippedDrawer from './components/drower/Drower';
+import BoxTemplate from './components/Templates/MainTemplateWropp'
 
 function App() {
     return (
