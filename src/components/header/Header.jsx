@@ -1,15 +1,11 @@
-import React, {useState} from "react";
-import './header.css'
-import '../menu/Menu.css'
-
+import React, { useState } from 'react';
+import './header.css';
+import '../menu/Menu.css';
 
 export default function QuizHeader() {
-    const [menuActive, setMenuActive] = useState(false)
-    // const hadleClick = () => {
-    //     setShowModal(!showModal);
-    // }
+  const [menuActive, setMenuActive] = useState(false);
 
-    return (
+  return (
             <header className="header">
                 <nav className="nav_menu">
                     <div className="burger_btn" onClick={() => setMenuActive(!menuActive)}>
@@ -22,5 +18,5 @@ export default function QuizHeader() {
                 </div>
             </header>
 
-    )
+  );
 }

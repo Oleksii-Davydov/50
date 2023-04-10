@@ -1,25 +1,27 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from '@mui/material/Button';
-import CreateModal from '../dialogs/CreateModal';
 import { Link } from 'react-router-dom';
 import {
-    Card,
-    CardMedia,
-    CardContent,
-    Typography,
-    CardActions
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  CardActions,
 } from '@mui/material';
+import CreateModal from '../dialogs/CreateModal';
 
-export default function MediaCard({quiz}) {
-    const {avatar, name, description, section} = quiz;
-    const [open, setOpenModal] = useState(false)
-    const pathToName = name.split(' ').join('_').toLowerCase();
+export default function MediaCard({ quiz }) {
+  const {
+    avatar, name, description, section,
+  } = quiz;
+  const [open, setOpenModal] = useState(false);
+  const pathToName = name.split(' ').join('_').toLowerCase();
 
-    return (
+  return (
         <>
-            <Card sx={{maxWidth: 345}}>
+            <Card sx={{ maxWidth: 345 }}>
                 <CardMedia
-                    sx={{height: 140}}
+                    sx={{ height: 140 }}
                     image={avatar}
                     title={name}
                 />
@@ -34,8 +36,8 @@ export default function MediaCard({quiz}) {
                 <CardActions>
                     <Button size="small" class="button">
                         <Link
-                            style={{textDecoration: 'none', color: 'inherit'}}
-                            to={`/quizs/${pathToName}`}
+                            style={{ textDecoration: 'none', color: 'inherit' }}
+                            to={ `/quizs/${pathToName}` }
                         >
                             Find QUIZ
                             </Link>
@@ -52,5 +54,5 @@ export default function MediaCard({quiz}) {
                 section={section}
             />
         </>
-    )
+  );
 }

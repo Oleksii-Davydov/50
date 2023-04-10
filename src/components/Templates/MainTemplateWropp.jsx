@@ -1,32 +1,31 @@
 import * as React from 'react';
-import Menu from '../menu/Menu';
-import {useState} from 'react';
-import Footer from '../footer/Footer';
+import { useState } from 'react';
 import {
-    Box,
-    AppBar,
-    CssBaseline
+  Box,
+  AppBar,
+  CssBaseline,
 } from '@mui/material';
+import Menu from '../menu/Menu';
+import Footer from '../footer/Footer';
 
 export default function BoxTemplate({ children }) {
-    const [menuActive, setMenuActive] = useState(false)
-    const items = [
-        {value: "MAIN", href: "/quizs"},
-        {value: "HTML", href: "/quizs/html"},
-        {value: "CSS", href: "/quizs/css"},
-        {value: "JS", href: "/quizs/js"},
-        {value: "ReactJS", href: "/quizs/reactjs"},
-        {value: "SASS and SCSS", href: "/quizs/sass_and_scss"},
-        {value: "GitHub", href: "/quizs/github"},
-        {value: "Faworite", href: "/quizs/faworite"},
-        {value: "Criate New Quiz", href: "/criatr_new_quiz"}
-    ];
+  const [menuActive, setMenuActive] = useState(false);
+  const items = [
+    { value: 'MAIN', href: '/quizs' },
+    { value: 'HTML', href: '/quizs/html' },
+    { value: 'CSS', href: '/quizs/css' },
+    { value: 'JS', href: '/quizs/js' },
+    { value: 'ReactJS', href: '/quizs/reactjs' },
+    { value: 'SASS and SCSS', href: '/quizs/sass_and_scss' },
+    { value: 'GitHub', href: '/quizs/github' },
+    { value: 'Faworite', href: '/quizs/faworite' },
+    { value: 'Criate New Quiz', href: '/criatr_new_quiz' },
+  ];
 
-    return (
-        <Box sx={{display: ''}}>
+  return (
+        <Box sx={{ display: '' }}>
             <CssBaseline/>
-            <AppBar position="fixed" sx={{zIndex: (theme) => theme.zIndex.drawer + 1}}>
-                {/*<QuizHeader/>*/}
+            <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
                 <header className="header">
                     <nav className="nav_menu">
                         <div className="burger_btn" onClick={() => setMenuActive(!menuActive)}>
@@ -42,15 +41,13 @@ export default function BoxTemplate({ children }) {
             </AppBar>
             <div className="box_main">
                 <div className="box_menu">
-                    <Menu active={menuActive} setActive={setMenuActive} header={"Menu"} items={items}/>
+                    <Menu active={menuActive} setActive={setMenuActive} header={ 'Menu'} items={items}/>
                 </div>
                 <div className="main">
                     {children}
                 </div>
-
             </div>
             <Footer/>
-
         </Box>
-    );
+  );
 }

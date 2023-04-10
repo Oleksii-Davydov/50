@@ -1,19 +1,18 @@
 import * as React from 'react';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import { Box } from '@mui/material';
 import QuizList from '../mediaCard/QuizList';
 import QuizsRoutes from '../mediaCard/QuizsRoutes';
-import {Box} from '@mui/material';
 import NotFound from '../NotFound';
 import QuizsRoutesHtml from '../Tests/Html/QuizsRoutesHtml';
-import {
-    BrowserRouter,
-    Routes,
-    Route
-} from 'react-router-dom';
 
 export default function ClippedDrawer() {
-
-    return (
-            <Box sx={{display: ''}}>
+  return (
+            <Box sx={ { display: '' } }>
                 <BrowserRouter>
                     <Routes>
                         <Route index element={<QuizList/>} path='/quizs'/>
@@ -23,5 +22,5 @@ export default function ClippedDrawer() {
                     </Routes>
                 </BrowserRouter>
             </Box>
-    );
+  );
 }

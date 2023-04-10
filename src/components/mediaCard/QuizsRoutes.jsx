@@ -1,11 +1,11 @@
 import React from 'react';
-import QuizsTests from '../quizsTests/QuizsTests'
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import QuizsTests from '../quizsTests/QuizsTests';
 
 export default function QuizsRoutes() {
-    return (
+  return (
         <Routes>
             <Route path='/:name' element={<QuizsTests/>}/>
         </Routes>
-    )
+  );
 }
