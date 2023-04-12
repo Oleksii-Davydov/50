@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from 'react';
 import './Menu.css';
 
@@ -11,9 +12,9 @@ export default function Menu({
           {header}
         </div>
         <ul>
-          {items.map((item) => <li>
+          {items.map((item) => (<li>
             <a href={item.href}>{item.value}</a>
-          </li>)}
+          </li>))}
         </ul>
       </div>
     </div>

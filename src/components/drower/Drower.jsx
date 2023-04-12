@@ -9,18 +9,22 @@ import QuizList from '../mediaCard/QuizList';
 import QuizsRoutes from '../mediaCard/QuizsRoutes';
 import NotFound from '../NotFound';
 import QuizsRoutesHtml from '../Tests/Html/QuizsRoutesHtml';
+import BoxTemplate from '../Templates/MainTemplateWropp';
 
 export default function ClippedDrawer() {
   return (
-            <Box sx={ { display: '' } }>
-                <BrowserRouter>
-                    <Routes>
-                        <Route index element={<QuizList/>} path='/quizs'/>
-                        <Route path='*' element={<NotFound/>}/>
-                        <Route path='/quizs/*' element={<QuizsRoutes/>}/>
-                        <Route path='/html/*' element={<QuizsRoutesHtml/>}/>
-                    </Routes>
-                </BrowserRouter>
-            </Box>
+    <BoxTemplate>
+      <Box sx={ { display: '' } }>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<QuizList/>} path='/quizs'/>
+            <Route path='*' element={<NotFound/>}/>
+            <Route path='/quizs/*' element={<QuizsRoutes/>}/>
+            <Route path='/html/*' element={<QuizsRoutesHtml/>}/>
+          </Routes>
+        </BrowserRouter>
+      </Box>
+    </BoxTemplate>
+
   );
 }

@@ -15,14 +15,14 @@ function MyTimer({ expiryTimestamp }) {
       <div style={{ color: 'black' }}>
         <span>{minutes}</span>:<span>{seconds}</span>
       </div>
-      <p>{isRunning ? <HtmlTestBasic /> : <Resuit />}</p>
+      <p>{isRunning ? <HtmlTestBasic/> : <Resuit/>}</p>
     </div>
   );
 }
 
 export default function Timer() {
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 180); // 10 minutes timer
+  time.setSeconds(time.getSeconds() + 180); // 3 minutes timer
   return (
     <div>
       <MyTimer expiryTimestamp={time} />

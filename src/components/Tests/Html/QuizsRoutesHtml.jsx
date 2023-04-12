@@ -4,8 +4,8 @@ import Timer from '../../Timer/Timer';
 
 export default function QuizsRoutesHtml() {
   return (
-    <Routes>
-      <Route path='/:name' element={<Timer />} />
-    </Routes>
+      <Routes>
+        <Route path='/:name' element={<Timer />} />
+      </Routes>
   );
 }

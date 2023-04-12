@@ -147,7 +147,8 @@ export default function HtmlTestBasic() {
               <div style={{ color: 'white' }} className="question_text">{question[currentQuestion].questionText}</div>
             </div>
             <div className="answer_section">
-              {question[currentQuestion].answerOptions.map(item => (
+              {question[currentQuestion].answerOptions.map((item) => (
+                // eslint-disable-next-line react/jsx-key
                 <button className="btn_test"
                   onClick = {() => hendleAnswerOptionClick(item.isCorrect)}
                 >{item.answertext}</button>))}
